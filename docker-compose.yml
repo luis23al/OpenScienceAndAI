@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  grobid:
+    image: lfoppiano/grobid:0.7.2
+    container_name: grobid
+    ports:
+      - "8070:8070"
+      - "8071:8071"
+
+  grobit_app:
+    build: .
+    container_name: grobit_app
+    depends_on:
+      - grobid
+    environment:
+      - GROBID_URL=http://grobid:8070
+    volumes:
+      - ./pdfs:/app/pdfs
+
+    command: python main.py

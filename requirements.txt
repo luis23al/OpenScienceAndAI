@@ -1,0 +1,4 @@
+matplotlib
+wordcloud
+lxml
+requests
