@@ -1,1 +1,2 @@
 # OpenScienceAndAI
+El funcionamiento del programa es muy sencillo, tras ejecutar el comando 'docker compose up --build' se iniciará el servicio de grobid y se ejecutará el programa main.py el cual ejecuta el resto de scripts. Estos leeran de la carpeta app/pdfs unicamente los ficheros con esta extensión y mostrará en primer lugar la cloud con las palabras clave del abstract, a continuación un diagrama con el numero de figuras por archivo y finalmente la lista de enlaces de cada archivo, guardando los resultados en la carpeta 'results'
